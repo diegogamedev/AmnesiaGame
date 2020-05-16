@@ -31,14 +31,12 @@ public class CharacterControllerSimpleConfig : MonoBehaviour
         {
             if (controller.isGrounded)
             {
-                print("pulei");
                 verticalDirection.y = Mathf.Sqrt(impulseJump * -2 * gravity);
             }
         }
 
-        if (!controller.isGrounded)
+        if (verticalDirection.y >= -11f)
         {
-            print("adicionando gravidade");
             verticalDirection.y += gravity * Time.deltaTime;
         }
 

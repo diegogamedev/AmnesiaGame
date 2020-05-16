@@ -8,11 +8,13 @@ public class LevelSpinnerScript : MonoBehaviour
 
     private void Update()
     {
+        print(destination == transform.rotation);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, destination, 0.1f);
     }
 
     public void Spin(Vector3 direction)
     {
+        print("chamei");
         destination = Quaternion.Euler(direction);
     }
 }

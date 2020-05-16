@@ -6,8 +6,9 @@ public class FPSCameraScript : MonoBehaviour
 {
     public float sensitivity = 100f;
     public Transform playerBody;
-    public Vector3 cameraDif;
     float xRotation = 0f;
+
+
     void Update()
     {
         Cursor.visible = false;
@@ -20,5 +21,10 @@ public class FPSCameraScript : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
+
+        if (Physics.Linecast(transform.position, playerBody.position, 8))
+        {
+            print("true");
+        }
     }
 }
