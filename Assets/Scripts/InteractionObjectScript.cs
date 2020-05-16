@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class InteractionObjectScript : MonoBehaviour
 {
-    public LevelSpinnerScript interaction;
+    public LevelSpinnerScript spin;
+    public Vector3 eulerSpinTo;
     private void OnTriggerEnter(Collider other)
     {
-        interaction.
+        if (other.gameObject.CompareTag("Player"))
+        {
+            spin.Spin(eulerSpinTo);
+        }
+
     }
 }

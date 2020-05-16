@@ -8,7 +8,7 @@ public class LevelSpinnerScript : MonoBehaviour
 
     private void Update()
     {
-        transform.rotation = Quaternion.RotateTowards(transform.position, )
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, destination, 0.1f);
     }
 
     public void Spin(Vector3 direction)
