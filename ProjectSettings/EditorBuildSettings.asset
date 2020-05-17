@@ -9,8 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: e2947fecb86a54149bab473a3c954ea0
   - enabled: 1
+    path: Assets/Scenes/LoadingScreen.unity
+    guid: ac1fff7ba6c48fa4f8d9466cd99c0776
+  - enabled: 1
     path: Assets/Scenes/Fase1.unity
     guid: cc32a8fd17d92144086b3c6d72cdb2f4
+  - enabled: 1
+    path: Assets/Scenes/Fase2.unity
+    guid: 1e95f8bd31fa5a64fa2dbc404ceb4f11
+  - enabled: 1
+    path: Assets/Scenes/Fase3.unity
+    guid: 28098ddc8ccb8654bbbf44689635315d
   - enabled: 1
     path: Assets/Scenes/FaseFinal.unity
     guid: 11ccf62634b81c1449d00ccd8acde146
