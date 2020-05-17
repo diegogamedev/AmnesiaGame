@@ -14,7 +14,11 @@ public class InteractionObjectScript : MonoBehaviour
      * E insire a variavel eulerSpinTo, 
      * que carrega uma coordenada global do giro,
      * na função Spin(), na classe LevelSpinnerScript.cs
+     * 
+     * Talvez você precise fazer um diferente, por causa do audio.
+     * Ou um check no awake se o objeto é nulo, ai vc evita de rodar o script a toa
      */
+
     private void Awake()
     {
         memoryAudio = GetComponent<AudioSource>();
@@ -25,6 +29,7 @@ public class InteractionObjectScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             spin.Spin(eulerSpinTo);
+            //Parte de audio
             memory.Play();
             memoryAudio.Play();
             StartCoroutine(FadeAudio(memoryAudio.clip.length, 0.1f));

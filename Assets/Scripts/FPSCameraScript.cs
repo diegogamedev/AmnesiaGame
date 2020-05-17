@@ -7,6 +7,12 @@ public class FPSCameraScript : MonoBehaviour
     public float sensitivity = 100f;
     public Transform playerBody;
     float xRotation = 0f;
+    Camera cam;
+
+    private void Awake()
+    {
+        cam = GetComponent<Camera>();
+    }
 
 
     void Update()
@@ -22,9 +28,18 @@ public class FPSCameraScript : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
 
-        if (Physics.Linecast(transform.position, playerBody.position, 8))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            print("true");
+            RaycastHit hit;
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            if(Physics.Raycast(ray, out hit))
+            {
+                print(hit.collider.name);
+                if(hit.collider.name == "Valvula")
+                {
+                    hit.collider.gameObject.GetComponent<ValveScript>().RotatePipe();
+                }
+            }
         }
     }
 }

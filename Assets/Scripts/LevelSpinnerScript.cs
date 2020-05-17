@@ -7,10 +7,12 @@ public class LevelSpinnerScript : MonoBehaviour
     Quaternion destination;
     public AudioSource rumble;
     public bool spinning;
+    public float spinVelocity = 0.1f;
 
     private void Update()
     {
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, destination, 0.1f);
+        //Rotaciona o objeto 
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, destination, spinVelocity);
         if (destination == transform.rotation)
         {
             rumble.Stop();
