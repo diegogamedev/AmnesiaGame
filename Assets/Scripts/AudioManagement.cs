@@ -15,8 +15,7 @@ public class AudioManagement : MonoBehaviour
     }
 
     void Update()
-    {
-        
+    {        
         if (!landing)
         {
             if (Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
@@ -35,7 +34,7 @@ public class AudioManagement : MonoBehaviour
             {
                 playerAudio.Stop();
             }
-        }
+        }            
     }
 
     public IEnumerator LandingSound()
