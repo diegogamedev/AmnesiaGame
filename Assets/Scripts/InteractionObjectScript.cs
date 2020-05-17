@@ -9,17 +9,10 @@ public class InteractionObjectScript : MonoBehaviour
     AudioSource memoryAudio;
     public AudioSource memory;
 
-    /*
-     * Quando o player entra no trigger, ele chama o
-     * E insire a variavel eulerSpinTo, 
-     * que carrega uma coordenada global do giro,
-     * na função Spin(), na classe LevelSpinnerScript.cs
-     */
     private void Awake()
     {
         memoryAudio = GetComponent<AudioSource>();
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -30,7 +23,6 @@ public class InteractionObjectScript : MonoBehaviour
             StartCoroutine(FadeAudio(memoryAudio.clip.length, 0.1f));
         }
     }
-
     IEnumerator FadeAudio(float duration, float targetVolume)
     {
         float currentTime = 0;
