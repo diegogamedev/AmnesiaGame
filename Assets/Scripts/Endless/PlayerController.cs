@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -54,6 +55,7 @@ public class PlayerController : MonoBehaviour
         if (c.gameObject.CompareTag("SpawnedPrefab"))
         {
             gameover = true;
+            SceneManager.LoadScene("FaseFinal");
         }
     }
 }
