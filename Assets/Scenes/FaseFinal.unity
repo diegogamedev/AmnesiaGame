@@ -179,7 +179,8 @@ MonoBehaviour:
   - {fileID: 1807683856446005594, guid: d43f6d2f575a1a8449a20ab403714e45, type: 3}
   - {fileID: 8509085989634504579, guid: ec627515ab865b045ad5c3be6ab80e30, type: 3}
   - {fileID: 7669228244111605134, guid: 2bb628b83a904814db0e8fcf2b4a1358, type: 3}
-  groundLength: 15
+  - {fileID: 4356147357107489021, guid: 7628ec71b0be12448813f58358eb3807, type: 3}
+  groundLength: 20
 --- !u!114 &168721509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73fedaa1cae205e43a59b116a1c710d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 6
   life: 9
   cloudsPrefab: {fileID: -927199367670048503, guid: 71251c6d5d411fc4bbb3dec8cf287ce9,
     type: 3}
