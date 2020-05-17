@@ -6,7 +6,7 @@ public class AudioManagement : MonoBehaviour
 {
     public AudioClip[] clips;
     AudioSource playerAudio;
-
+    public CharacterController character; 
     bool landing;
 
     private void Awake()
@@ -18,14 +18,16 @@ public class AudioManagement : MonoBehaviour
     {        
         if (!landing)
         {
-            if (Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
+            if (Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical") && character.isGrounded)
             {
+                print("andando");
                 playerAudio.clip = clips[0];
                 playerAudio.Play();
                 playerAudio.loop = true;
             }
-            else if (Input.GetButtonDown("Jump"))
+            if (Input.GetButtonDown("Jump"))
             {
+                print("salto");
                 playerAudio.clip = clips[1];
                 playerAudio.Play();
                 playerAudio.loop = false;
@@ -40,10 +42,11 @@ public class AudioManagement : MonoBehaviour
     public IEnumerator LandingSound()
     {
         landing = true;
+        print("pouso");
         playerAudio.clip = clips[2];
         playerAudio.Play();
         playerAudio.loop = false;
-        yield return new WaitForSeconds(playerAudio.clip.length);
+        yield return new WaitForSeconds(playerAudio.clip.length/2);
         landing = false;
     }
 }

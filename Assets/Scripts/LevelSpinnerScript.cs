@@ -13,14 +13,12 @@ public class LevelSpinnerScript : MonoBehaviour
         transform.rotation = Quaternion.RotateTowards(transform.rotation, destination, 0.1f);
         if (destination == transform.rotation)
         {
-            print("stop");
             rumble.Stop();
         }
     }
 
     public void Spin(Vector3 direction)
     {
-        print("chamei");
         destination = Quaternion.Euler(direction);
         rumble.Play();
     }

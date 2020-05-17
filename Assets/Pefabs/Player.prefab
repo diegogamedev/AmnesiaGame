@@ -144,6 +144,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1c104f897bdafce47bab620333c6a10d, type: 3}
   - {fileID: 8300000, guid: 0c9e29ceab50bc14282d13a74869c9bb, type: 3}
   - {fileID: 8300000, guid: e12d9a4e38d050e41adb61782b9947f4, type: 3}
+  character: {fileID: 1403146337911855597}
 --- !u!1 &1403146336663357243
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,6 +254,7 @@ GameObject:
   - component: {fileID: 1403146337911855586}
   - component: {fileID: 1403146337911855597}
   - component: {fileID: 1403146337911855587}
+  - component: {fileID: 556270580}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -309,5 +311,19 @@ MonoBehaviour:
   speed: 5
   impulseJump: 4.5
   gravity: -9
+  audioObject: {fileID: 33382796}
   moveDirection: {x: 0, y: 0, z: 0}
   verticalDirection: {x: 0, y: 0, z: 0}
+--- !u!65 &556270580
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403146337911855596}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.65, z: 1}
+  m_Center: {x: 0, y: -2.36, z: 0}

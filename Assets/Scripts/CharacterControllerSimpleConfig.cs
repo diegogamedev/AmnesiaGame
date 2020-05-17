@@ -7,6 +7,7 @@ public class CharacterControllerSimpleConfig : MonoBehaviour
     public float speed;
     public float impulseJump;
     public float gravity;
+    public AudioManagement audioObject;
 
     public Vector3 moveDirection;
     public Vector3 verticalDirection;
@@ -20,7 +21,6 @@ public class CharacterControllerSimpleConfig : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -44,11 +44,8 @@ public class CharacterControllerSimpleConfig : MonoBehaviour
         controller.Move(verticalDirection * Time.deltaTime);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.layer == 8)
-        {
-            print("aaaa");
-        }
+        StartCoroutine(audioObject.LandingSound());
     }
 }
