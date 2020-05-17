@@ -14,7 +14,7 @@ public class MenuManager : MonoBehaviour
         animator = GetComponent<Animator>();
         StartCoroutine(panelDisappear());
     }
-    public void NextScene()
+    public void NextScene() 
     {
         panel.SetActive(true);
         animator.SetBool("StartGame", true);
