@@ -28,17 +28,22 @@ public class FPSCameraScript : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
 
-        if (Input.GetKeyDown(KeyCode.E))
+        RaycastHit hit;
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
         {
-            RaycastHit hit;
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            if(Physics.Raycast(ray, out hit))
+            if(hit.collider.name == "Valvula")
             {
-                print(hit.collider.name);
-                if(hit.collider.name == "Valvula")
+                ValveScript.cursorOver = true;
+
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     hit.collider.gameObject.GetComponent<ValveScript>().RotatePipe();
                 }
+            }
+            else
+            {
+                ValveScript.cursorOver = false;
             }
         }
     }
