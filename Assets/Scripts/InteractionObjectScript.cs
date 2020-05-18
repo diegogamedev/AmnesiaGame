@@ -36,6 +36,7 @@ public class InteractionObjectScript : MonoBehaviour
             memory.Play();
             memoryAudio.Play();
             StartCoroutine(FadeAudio(memoryAudio.clip.length, 0.1f));
+            Destroy(gameObject, memory.clip.length + .3f);
         }
     }
 
