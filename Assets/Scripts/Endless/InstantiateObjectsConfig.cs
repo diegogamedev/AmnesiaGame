@@ -11,7 +11,7 @@ public class InstantiateObjectsConfig : MonoBehaviour
     private List<GameObject> activeTiles = new List<GameObject>();
 
     private float spawnZ = 0;
-    private int groundsOnScreen = 25;
+    private int groundsOnScreen = 20;
     private bool first;
     private int index;
 

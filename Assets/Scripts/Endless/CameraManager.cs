@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
     
 public class CameraManager : MonoBehaviour
@@ -51,6 +52,10 @@ public class CameraManager : MonoBehaviour
     IEnumerator Gameover()
     {
         yield return new WaitForSeconds(2.0f);
-        gameObject.transform.Translate(Vector3.up * 1f * Time.deltaTime);
+        gameObject.transform.Translate(Vector3.up * 0.9f * Time.deltaTime);
+        yield return new WaitForSeconds(5.0f);
+        fadeIn.SetActive(true);
+        yield return new WaitForSeconds(6.5f);
+        SceneManager.LoadScene("Credits");
     }
 }

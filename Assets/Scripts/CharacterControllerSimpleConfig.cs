@@ -61,23 +61,22 @@ public class CharacterControllerSimpleConfig : MonoBehaviour
 
         if (other.gameObject.CompareTag("Fase3"))
         {
-            StartCoroutine(Video());
-            SceneManager.LoadScene("Fase3");
+            StartCoroutine(Video("Fase3"));
         }
 
         if (other.gameObject.CompareTag("Fase2"))
         {
-            StartCoroutine(Video());
-            SceneManager.LoadScene("Fase2");
+            StartCoroutine(Video("Fase2"));
         }
 
         StartCoroutine(audioObject.LandingSound());
     }
 
-    IEnumerator Video()
+    IEnumerator Video(string fase)
     {
         yield return new WaitForSeconds(3f);
         video.SetActive(true);
         yield return new WaitForSeconds(2.8f);
+        SceneManager.LoadScene(fase);
     }
 }

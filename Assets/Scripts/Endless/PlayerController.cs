@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
         if (c.gameObject.CompareTag("EndGame"))
         {
             endGame = true;
-            speed = 2;
+            speed = 1.3f;
         }
     }
 }
