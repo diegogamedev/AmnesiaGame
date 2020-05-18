@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class CharacterControllerSimpleConfig : MonoBehaviour
@@ -46,6 +47,17 @@ public class CharacterControllerSimpleConfig : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
+        if (other.gameObject.CompareTag("Gameover"))
+        {
+            SceneManager.LoadScene("Fase3");
+        }
+            
+
+        if (other.gameObject.CompareTag("Portal"))
+            SceneManager.LoadScene("FaseFinal");
+
+
         StartCoroutine(audioObject.LandingSound());
     }
 }
