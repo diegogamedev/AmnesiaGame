@@ -4,6 +4,8 @@ using UnityEngine;
     
 public class CameraManager : MonoBehaviour
 {
+    public GameObject fadeIn;
+
     private Transform lookAt;
     private float transition = 0;
     private float animDuration = 3.0f;
@@ -19,27 +21,36 @@ public class CameraManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveVector = lookAt.position + startPosition;
 
-        moveVector.x = 0;
-
-        moveVector.y = Mathf.Clamp(moveVector.y, 3, 5);
-
-        if(transition > 1)
+        if (!PlayerController.endGame)
         {
-            transform.position = moveVector;
+            moveVector = lookAt.position + startPosition;
+
+            moveVector.x = 0;
+
+            moveVector.y = Mathf.Clamp(moveVector.y, 3, 5);
+
+            if(transition > 1)
+            {
+                transform.position = moveVector;
+            }
+            else
+            {
+                transform.position = Vector3.Lerp(moveVector + animationOffset, moveVector, transition);
+                transition += Time.deltaTime * 1 / animDuration;
+                //transition.LookAt(lookAt.position + Vector3.up);
+            }
         }
         else
         {
-            transform.position = Vector3.Lerp(moveVector + animationOffset, moveVector, transition);
-            transition += Time.deltaTime * 1 / animDuration;
-            //transition.LookAt(lookAt.position + Vector3.up);
+            StartCoroutine(Gameover());
         }
-        
+
     }
 
     IEnumerator Gameover()
     {
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(2.0f);
+        gameObject.transform.Translate(Vector3.up * 1f * Time.deltaTime);
     }
 }

@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public float impulseJump;
     public float gravity;
 
-    public static bool land, gameover = false;
+    public static bool endGame, land, gameover = false;
 
     public Vector3 moveVector;
     CharacterController controller;
@@ -56,6 +56,11 @@ public class PlayerController : MonoBehaviour
         {
             gameover = true;
             SceneManager.LoadScene("FaseFinal");
+        }
+        if (c.gameObject.CompareTag("EndGame"))
+        {
+            endGame = true;
+            speed = 2;
         }
     }
 }

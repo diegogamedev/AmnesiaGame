@@ -8,6 +8,7 @@ public class CharacterControllerSimpleConfig : MonoBehaviour
     public float speed;
     public float impulseJump;
     public float gravity;
+    public GameObject video;
     public AudioManagement audioObject;
 
     public Vector3 moveDirection;
@@ -52,12 +53,31 @@ public class CharacterControllerSimpleConfig : MonoBehaviour
         {
             SceneManager.LoadScene("Fase3");
         }
-            
+
 
         if (other.gameObject.CompareTag("Portal"))
             SceneManager.LoadScene("FaseFinal");
 
 
+        if (other.gameObject.CompareTag("Fase3"))
+        {
+            StartCoroutine(Video());
+            SceneManager.LoadScene("Fase3");
+        }
+
+        if (other.gameObject.CompareTag("Fase2"))
+        {
+            StartCoroutine(Video());
+            SceneManager.LoadScene("Fase2");
+        }
+
         StartCoroutine(audioObject.LandingSound());
+    }
+
+    IEnumerator Video()
+    {
+        yield return new WaitForSeconds(3f);
+        video.SetActive(true);
+        yield return new WaitForSeconds(2.8f);
     }
 }
