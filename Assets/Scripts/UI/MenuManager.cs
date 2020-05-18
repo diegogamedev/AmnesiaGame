@@ -32,6 +32,10 @@ public class MenuManager : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         SceneManager.LoadScene(1);
     }
-                
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 
 }
