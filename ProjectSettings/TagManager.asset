@@ -7,6 +7,9 @@ TagManager:
   - SpawnedPrefab
   - Gameover
   - Portal
+  - EndGame
+  - Fase3
+  - Fase2
   layers:
   - Default
   - TransparentFX
