@@ -28,7 +28,10 @@ public class InteractionObjectScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            spin.Spin(eulerSpinTo);
+            if (spin)
+            {
+                spin.Spin(eulerSpinTo);
+            }
             //Parte de audio
             memory.Play();
             memoryAudio.Play();
