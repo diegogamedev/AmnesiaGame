@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractionObjectScript : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class InteractionObjectScript : MonoBehaviour
     public Vector3 eulerSpinTo;
     AudioSource memoryAudio;
     public AudioSource memory;
+    public Image imgRef;
+    public Sprite memoryImg;
 
     /*
      * Quando o player entra no trigger, ele chama o
@@ -22,6 +25,7 @@ public class InteractionObjectScript : MonoBehaviour
     private void Awake()
     {
         memoryAudio = GetComponent<AudioSource>();
+        imgRef.sprite = memoryImg;
     }
 
     private void OnTriggerEnter(Collider other)

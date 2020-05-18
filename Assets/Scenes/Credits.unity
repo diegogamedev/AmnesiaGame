@@ -260,6 +260,7 @@ MonoBehaviour:
   Pessoas:
   - {fileID: 4829047365912318716, guid: c3d3791e72b9e8742a360c95d3cdc586, type: 3}
   spawnPoint: {fileID: 1763385413}
+  spaceBetweenHeads: 5
 --- !u!61 &132950496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -386,6 +387,7 @@ MonoBehaviour:
   Pessoas:
   - {fileID: 2663670824178714254, guid: 16e2b5b75b9863c43b5177c00bbea0c2, type: 3}
   spawnPoint: {fileID: 1763385413}
+  spaceBetweenHeads: 5
 --- !u!61 &474238491
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -460,6 +462,7 @@ MonoBehaviour:
   - {fileID: 7824253642955556942, guid: 691af366866c44743b25e367c002956e, type: 3}
   - {fileID: 4593351461330710229, guid: 513eb67edcefa884f885e1256b9cb00d, type: 3}
   spawnPoint: {fileID: 1763385413}
+  spaceBetweenHeads: 5
 --- !u!61 &572773379
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -588,6 +591,7 @@ MonoBehaviour:
   - {fileID: 1802913212683538394, guid: 679a0aa0f699b074a8f12a3b0fb27d88, type: 3}
   - {fileID: 4829047365912318716, guid: c3d3791e72b9e8742a360c95d3cdc586, type: 3}
   spawnPoint: {fileID: 1763385413}
+  spaceBetweenHeads: 5
 --- !u!61 &682873622
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -825,6 +829,7 @@ MonoBehaviour:
   Pessoas:
   - {fileID: 7824253642955556942, guid: 691af366866c44743b25e367c002956e, type: 3}
   spawnPoint: {fileID: 1763385413}
+  spaceBetweenHeads: 5
 --- !u!61 &1123441077
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1052,6 +1057,7 @@ MonoBehaviour:
   - {fileID: 1802913212683538394, guid: 679a0aa0f699b074a8f12a3b0fb27d88, type: 3}
   - {fileID: 4593351461330710229, guid: 513eb67edcefa884f885e1256b9cb00d, type: 3}
   spawnPoint: {fileID: 1763385413}
+  spaceBetweenHeads: 5
 --- !u!61 &1449653776
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1191,6 +1197,7 @@ MonoBehaviour:
   Pessoas:
   - {fileID: 1802913212683538394, guid: 679a0aa0f699b074a8f12a3b0fb27d88, type: 3}
   spawnPoint: {fileID: 1763385413}
+  spaceBetweenHeads: 5
 --- !u!61 &1484511294
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1469,11 +1476,64 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763385412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 21.4, z: 12.1}
+  m_LocalPosition: {x: 0.01, y: 9.8, z: 12.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1915960380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1915960383}
+  - component: {fileID: 1915960382}
+  - component: {fileID: 1915960381}
+  m_Layer: 0
+  m_Name: Cube (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1915960381
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915960380}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1915960382
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915960380}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1915960383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915960380}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 31.9, z: 14}
+  m_LocalScale: {x: 63.441193, y: 1.1517686, z: 18.42096}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2135654530
 GameObject:
@@ -1522,6 +1582,7 @@ MonoBehaviour:
   Pessoas:
   - {fileID: 7824253642955556942, guid: 691af366866c44743b25e367c002956e, type: 3}
   spawnPoint: {fileID: 1763385413}
+  spaceBetweenHeads: 5
 --- !u!61 &2135654533
 BoxCollider2D:
   m_ObjectHideFlags: 0
