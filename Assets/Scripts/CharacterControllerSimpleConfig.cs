@@ -56,7 +56,9 @@ public class CharacterControllerSimpleConfig : MonoBehaviour
 
 
         if (other.gameObject.CompareTag("Portal"))
-            SceneManager.LoadScene("FaseFinal");
+        {
+            StartCoroutine(Video("FaseFinal"));
+        }
 
 
         if (other.gameObject.CompareTag("Fase3"))

@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
         if (c.gameObject.CompareTag("SpawnedPrefab"))
         {
             gameover = true;
-            SceneManager.LoadScene("FaseFinal");
+            SceneManager.LoadScene("Credits");
         }
         if (c.gameObject.CompareTag("EndGame"))
         {
